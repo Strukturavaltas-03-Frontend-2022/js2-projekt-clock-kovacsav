@@ -12,8 +12,13 @@ const setTwoCharacters = (string) => {
   return string;
 };
 
-clockParagraph.textContent = `${setTwoCharacters(
-  aktualDate.getHours()
-)}:${setTwoCharacters(aktualDate.getMinutes())}:${setTwoCharacters(
-  aktualDate.getSeconds()
-)}`;
+const setTime = () => {
+  aktualDate = new Date();
+  clockParagraph.textContent = `${setTwoCharacters(
+    aktualDate.getHours()
+  )}:${setTwoCharacters(aktualDate.getMinutes())}:${setTwoCharacters(
+    aktualDate.getSeconds()
+  )}`;
+};
+
+const timer = setInterval(setTime, 1000);

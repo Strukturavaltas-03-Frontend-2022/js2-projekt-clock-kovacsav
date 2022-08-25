@@ -4,12 +4,11 @@ let aktualDate = new Date();
 
 const clockParagraph = document.querySelector(".time");
 
-const setTwoCharacters = (string) => {
-  console.log(typeof string);
-  if (string < 10) {
-    return `0${string}`;
+const setTwoCharacters = (number) => {
+  if (number < 10) {
+    return `0${number}`;
   }
-  return string;
+  return number;
 };
 
 const setTime = () => {
